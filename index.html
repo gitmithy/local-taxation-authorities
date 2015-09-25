@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<!--[if IE 6]>  <link rel="stylesheet" type="text/css" href="css/ie6.css"/> <![endif]-->
+		<script type="text/javascript" src="js/jquery1.42.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.cxscroll.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js" ></script>
+		
+		<script type="text/javascript" src="js/script.js" ></script>
+
+	</head>
+	<body>
+		<div class="header">
+			<ul class="lh30 ft14">
+				<li class="fl" ><a>欢迎访问十堰市地税局内网</a></li>
+				<li class="date fl ml10 ft14">
+					<script>							
+						var now=new Date();
+						var year=now.getFullYear();
+						var month=now.getMonth();
+						var date=now.getDate();
+						var day=now.getDay();
+						var hour=now.getHours();
+						var minu=now.getMinutes();
+						var sec=now.getSeconds();
+						var week;
+						month=month+1;
+						if(month<10) month="0"+month;
+						if(date<10) date="0"+date;
+						if(hour<10) hour="0"+hour;
+						if(minu<10) minu="0"+minu;
+						if(sec<10) sec="0"+sec;
+						var arr_week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+						week=arr_week[day];
+						var time="";
+						time=year+"年"+month+"月"+date+"日"+""	
+					document.write("今天是"+time);
+					</script>
+				</li>
+				<li class="rh fav" style="float: right;">
+						<span ><a href="javascript:void(0);" onclick="SetHome(this,'http://city.miku.cf');">设为首页</a></span>
+						<span class="ml10"><a onclick="try{ window.external.AddFavorite('http://city.miku.cf','十堰市数字化城市管理监督指挥中心'); } catch(e){ (window.sidebar)?window.sidebar.addPanel('十堰市数字化城市管理监督指挥中心','http://city.miku.cf',''):alert('请使用按键 Ctrl+d，十堰市数字化城市管理监督指挥中心'); }">收藏</a></span>
+				</li>
+				
+			</ul>		
+		</div>
+		<div class="top">
+			
+		</div>
+		<div class="nav">
+			<div class="navlist">
+							<ul id="navul" class="cl">
+											<li class="navhome"  style="border-right: 1px solid #C1C1C1;"><a href="http://zt.10yan.com/html/zgyh/">首页</a></li>
+											<li style="border-right: 1px solid #C1C1C1;">
+												<a href="#">通知公告</a>
+												<!--<ul>
+													<li><a href="http://zt.10yan.com/html/zgyh/wzxw/">测试</a></li>
+													<li><a href="http://zt.10yan.com/html/zgyh/xhd/">测试</a></li>
+				
+												</ul>-->
+											</li>
+											<li style="border-right: 1px solid #C1C1C1;">
+												<a href="#">工作动态</a>
+												<!--<ul>
+													<li><a href="http://zt.10yan.com/html/zgyh/lccp/cpgg/">测试</a></li>
+													<li><a href="http://zt.10yan.com/html/zgyh/lccp/cpjz/">测试</a></li>
+				
+												</ul>-->
+											</li>
+											<li style="border-right: 1px solid #C1C1C1;">
+												<a href="#">党的建设</a>
+												<!--<ul>
+													<li><a href="http://zt.10yan.com/html/zgyh/cglx/">测试</a></li>
+													<li><a href="http://zt.10yan.com/html/zgyh/gjsl/">测试</a></li>
+													<li><a href="http://zt.10yan.com/html/zgyh/tzym/">测试</a></li>
+													<li><a href="http://zt.10yan.com/html/zgyh/wpgz/">测试</a></li>
+				
+												</ul>-->
+											</li>
+											<li style="border-right: 1px solid #C1C1C1;">
+												<a href="#">队伍建设</a>
+												<!--<ul>
+													<li><a href="http://zt.10yan.com/html/zgyh/rktj/">测试</a></li>
+													<li><a href="http://zt.10yan.com/html/zgyh/gdkp/">测试</a></li>
+				
+												</ul>-->
+											</li>
+											<li style="border-right: 1px solid #C1C1C1;">
+												<a href="#">业务建设</a>
+												<!--<ul>
+													<li><a href="http://zt.10yan.com/html/zgyh/yhsh/">测试</a></li>
+													<li><a href="http://zt.10yan.com/html/zgyh/jfdh/">测试</a></li>
+												</ul>-->
+											</li>
+											<li style="border-right: 1px solid #C1C1C1;">
+												<a href="http://zt.10yan.com/html/zgyh/bjfw/">专题专栏</a>
+											</li>
+											<li style="border-right: 1px solid #C1C1C1;">
+												<a href="http://zt.10yan.com/html/zgyh/bjfw/">视频在线</a>
+											</li>
+											<li>
+												<a href="http://zt.10yan.com/html/zgyh/bjfw/">武当博园</a>
+											</li>
+											<li>
+												<form style="height: 25px; width: 210px; float: left; line-height: 55px;  " action="http://127.0.0.1/index.php" method="get" target="_blank">
+													<input type="hidden" name="m" value="search">
+													<input type="hidden" name="c" value="index">
+													<input type="hidden" name="a" value="init">
+													<input type="hidden" name="typeid" value="" id="typeid">
+													<input type="hidden" name="siteid" value="1" id="siteid">
+													<input type="text"  type="text" value="请输入你要查询的关键字" onfocus="if(this.value=='请输入你要查询的关键字'){this.value='';}"  onblur="if(this.value==''){this.value='请输入你要查询的关键字';}"  class="text fl" name="q" id="q" style="width: 150px; height: 24px;">
+													<input type="submit" value="搜 索" class="button fl" style="width: 50px; height: 24px;">
+												</form>
+											</li>
+							
+										</ul>						
+								<script  type="text/javascript"> 
+								$(document).ready(function(){
+									
+									$(".navbg").capacityFixed();
+									
+									$("#navul > li").not(".navhome").hover(function(){
+										$(this).addClass("navmoon");
+									},function(){
+										$(this).removeClass("navmoon");
+									});					
+								});
+								</script>				
+						</div>								
+		</div>
+		<div class="toutiao">
+			<li style="height: 85px;"><a href="">郧阳区地税局突出“四个环节”打好正风肃纪持久战</a></li>	
+		</div>
+		<div class="main">
+			<div class="con-lft">
+				<div class="hd">
+					<div class="m-slide">
+							<ul class="img" style="margin-top: 10px;">
+								<li><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/hd.jpg" /></a></li>
+								<li><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/hd.jpg" /></a></li>
+								<li><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/hd.jpg" /></a></li>
+								<li><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/hd.jpg" /></a></li>
+							</ul>
+							<ul class="hdnav" style="height: 50px; width: 550px; float: left; margin-left: 10px;border-bottom: 2px solid #1369C0; ">
+								<li style="height: 50px;width: 550px; margin-top: 5px;  background-image: url(img/nav1.jpg); background-repeat: no-repeat;  "></li>
+								
+								
+							</ul>
+							<ul class="tab">
+								<li style="margin-top: 5px;">
+									<a href="#" class="listyle4">
+										<p class="pstyle">经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 学习阶段”活动 经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 </p> 
+										
+									</a>
+								</li>
+								<li style="margin-top: 5px;">
+									<a href="#" class="listyle4">
+										<p class="pstyle">经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 学习阶段”活动 经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 </p> 
+										
+									</a>
+								</li>
+								<li style="margin-top: 5px;">
+									<a href="#" class="listyle4">
+										<p class="pstyle">经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 学习阶段”活动 经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 </p> 
+										
+									</a>
+								</li>
+								<li style="margin-top: 5px;">
+									<a href="#" class="listyle4">
+										<p class="pstyle">经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 学习阶段”活动 经济开发区分局“三学三讲三写”落实“正风肃纪 重塑形象 </p> 
+										
+									</a>
+								</li>
+							</ul>
+							<b class="bottom-shadow"></b>
+					</div>				
+					<script type="text/javascript">
+						jQuery(".m-slide").slide({ titCell:".tab li", mainCell:".img",effect:"fold", autoPlay:true});
+					</script>						
+				</div>
+				<div class="lftcon1 mt30">
+					<div class="lft1" style="width: 542px;">
+						<div class="slideTxtBox">
+							<div class="hd fl">
+								<ul>
+									<li class="on" style="padding-left: 10px;"><a href="#">市局发文</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">地税简报</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">基层动态</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">媒体报道</a></li>
+
+	
+								</ul>
+								<span class="ft14 lh25 more">
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+								</span>								
+							</div>
+							<div class="bd fl">
+								<ul style="display: block;">
+									<div class="ud1">
+										
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>东汽分局税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>		
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>									
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1" style="">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>							
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>
+							
+							</div>
+						</div>
+						<script type="text/javascript">jQuery(".slideTxtBox").slide({targetCell:".more a"});</script>							
+					</div>
+					<div class="lft1 ml15" style="width: 542px;">
+						<div class="slideTxtBox">
+							<div class="hd fl">
+								<ul>
+									<li class="on" style="padding-left: 10px;"><a href="#">党风廉政</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">基层党建</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">规章制度</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">道德讲堂</a></li>
+
+	
+								</ul>
+								<span class="ft14 lh25 more">
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+								</span>								
+							</div>
+							<div class="bd fl">
+								<ul style="display: block;">
+									<div class="ud1">
+										
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>		
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>									
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1" style="">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>							
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl"><a><img src="img/pto.jpg" ></a> </li>
+											<li class="fl ml15" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml15"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>
+							
+							</div>
+						</div>
+						<script type="text/javascript">jQuery(".slideTxtBox").slide({targetCell:".more a"});</script>							
+					</div>
+				</div>
+				<div class="lftcon2">
+					<div class="lft1" style="width: 542px;">
+						<div class="slideTxtBox">
+							<div class="hd fl">
+								<ul>
+									<li class="on" style="padding-left: 10px;"><a href="#">郧阳税务</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">学习园地</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">经验交流</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">地税故事</a></li>
+
+	
+								</ul>
+								<span class="ft14 lh25 more">
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+								</span>								
+							</div>
+							<div class="bd fl">
+								<ul style="display: block;">
+									<div class="ud1">
+										
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>东汽分局税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>		
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>									
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1" style="">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>							
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>
+							
+							</div>
+						</div>
+						<script type="text/javascript">jQuery(".slideTxtBox").slide({targetCell:".more a"});</script>							
+					</div>
+					<div class="lft1 ml15" style="width: 542px;">
+						<div class="slideTxtBox">
+							<div class="hd fl">
+								<ul>
+									<li class="on" style="padding-left: 10px;"><a href="#">政策法规</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">税费征管</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">纳税服务</a></li>
+									<li class="ml10"  style="font-family: '宋体';"><a href="#">税收评定</a></li>
+
+	
+								</ul>
+								<span class="ft14 lh25 more">
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+									<a href="">+更多</a>
+								</span>
+							</div>
+							<div class="bd fl">
+								<ul style="display: block;">
+									<div class="ud1">
+										
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>		
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>									
+									</div>
+
+								</ul>
+								<ul style="display: block;">
+									<div class="ud1" style="">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2"  >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>							
+								<ul style="display: block;">
+									<div class="ud1">
+										<ul class="mg18" style="width: 505px;">
+											<li class="fl mg8"><a><img src="img/pic2.jpg" ></a> </li>
+											<li class="fl ml20" style="text-align: center; width: 300px;"><a><h2>郧阳地区地方税务局正式挂牌</h2> </a></li>
+											<li class="fl ml20"><p style="display: block; width: 300px; text-indent: 2em;margin-top: 10px;">7月6日上午，十堰市郧阳区地方税务局正式挂牌，市局党组成员、副局长汤禺成，区局党组书记</p></li>
+											
+										</ul>
+										<ul class="mg10 bdul2" >
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+											<li class="listyle3"><span class="rh">[2011-01-01]</span><a>郧西县地方税务局做好四个“多选题”正风肃纪重塑形象</a></li>
+										</ul>
+									</div>
+
+								</ul>
+							
+							</div>
+						</div>
+						<script type="text/javascript">jQuery(".slideTxtBox").slide({targetCell:".more a"});</script>							
+					</div>
+				</div>		
+			</div>
+			<div class="con-rht">
+				<div class="rh1 mt9">
+				<ul style="width: 293px;">
+					<li class="fl ht40 listyle" ><a><img src="img/ico.jpg" />  </a><a>通知公告</a></li>
+					<li class="rh ht40 limore" style="font-size: 15px; line-height: 35px;"><a>+更多</a></li>
+				</ul>
+				<ul class="fl" style="width: 293px; height: 305px; background-image: url(img/bg1.jpg); padding-top: 12px;5px;padding-right: 5px;">
+					<li class="listyle1"><a>关于启用《中华人民共和国企业所得税月（季）度预缴纳税申报表 </a></li>
+					<li class="listyle1" ><a>关于启用《中华人民共和国企业所得税月（季）度预缴纳税申报表 </a></li>
+					<li class="listyle1" ><a>关于启用《中华人民共和国企业所得税月（季）度预缴纳税申报表 </a></li>
+					<li class="listyle1" ><a>关于启用《中华人民共和国企业所得税月（季）度预缴纳税申报表 </a></li>
+					<li class="listyle1" ><a>关于启用《中华人民共和国企业所得税月（季）度预缴纳税申报表 </a></li>	
+				</ul>
+
+				
+				</div>
+				<div class="rh2 mt15 fl" style="text-align: center;width: 298px;">
+					<li><a><img src="img/dv1.jpg" /> </a> </li>
+					<li><a><img src="img/dv2.jpg" /> </a> </li>
+					<li><a><img src="img/dv3.jpg" /> </a> </li>
+					<li><a><img src="img/dv4.jpg" /> </a> </li>					
+				
+				
+				</div>
+				<div class="rh3 mt12 fl">
+					<ul style="width: 293px;">
+					<li class="fl ht40 listyle" ><a><img src="img/ico.jpg" />  </a><a>视频在线</a></li>
+					<li class="rh ht40 limore" style="font-size: 15px; line-height: 35px;"><a>+更多</a></li>	
+					</ul>
+					<ul class="fl mt10" style="width: 293px; text-align: center; ">
+						<li class="fl" style="width: 145px; text-align: center;"><a ><img src="img/piv1.jpg" /> </a> </li>
+						<li class="fl" style="width: 145px; text-align: center;"><a ><img src="img/piv1.jpg" /> </a> </li>
+					</ul>
+					<ul class="fl mt10" style="width: 293px; font-size: 15px;">
+						<li class="listyle2"><a>中国新媒体旅游电商分享交流会举行 </a></li>
+						<li class="listyle2"><a>中国新媒体旅游电商联盟在十堰成立</a></li>						
+					</ul>
+				
+				</div>
+				<div class="rh4 mt8 fl">
+					<ul style="width: 293px;">
+					<li class="fl ht40 listyle" ><a><img src="img/ico.jpg" />  </a><a>税费收入</a></li>
+					<li class="rh ht40 limore" style="font-size: 15px; line-height: 35px;"><a>+更多</a></li>	
+					</ul>				
+					<ul class="fl " style="width: 293px; text-align: center; ">
+						<li><a><img src="img/sz.jpg" /> </a> </li>
+						
+					</ul>					
+					<ul class="fl mt10" style="width: 298px;">
+						<li class="fl"><a><img src="img/button1.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button2.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button3.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button4.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button5.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button6.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button7.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button8.jpg" /> </a> </li>
+						<li class="fl"><a><img src="img/button9.jpg" /> </a> </li>
+					</ul>					
+				
+				</div>
+				
+				
+				
+				
+			</div>
+		
+		</div>
+		<div class="bottom " >
+			<ul>
+				<li class="fl" style="height: 35px; font-size: 20px; color: #1369C0; padding-left: 5px; <!--border-bottom: 1px solid #1369C0;-->">摄影专区</li>
+			</ul>
+			<div id="pic_list_1" class="scroll_horizontal">
+					<a class="next"></a>
+					<a class="prev"></a>
+						<div class="box">
+							<ul class="list">
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+								<li style="text-align: center;"><a href="#"><img src="img/photo1.jpg" width="300" height="190" alt="员工风貌"><br>员工风貌</a></li>
+
+							</ul>
+						</div>		
+				<script>
+				$("#pic_list_1").cxScroll();
+				</script>				
+			</div>			
+			
+			
+		</div>
+<div class="contact" style="border: 1px solid lavender; margin-top: 15px;">
+			<div style="float: left;"><img src="img/contract.jpg"> </div>
+			<div class="fl" style="padding: 5px; 0"><a style="display: block;"><img src="img/contra.jpg" /></a>  </div>
+			<div class="rh" style="padding: 5px; 0"><img src="img/contra1.jpg" />  </div>
+			<div class="conlist" style="height: 43px; width: 900px; float: left; line-height: 34px;">
+					<table width="960" height="43" align="center" cellpadding="1">
+					      <tbody><tr>
+					        <td height="30"><table width="940" height="28" border="0" cellpadding="1">
+					          <tbody><tr>
+					            <td height="22" style="word-wrap:break-word;table-layout:fixed">
+					              <div align="center">
+					                        <select name="select" onchange="javasctipt:window.open(this.value,'_blank')" style="FONT-FAMILY: 宋体; FONT-SIZE: 12px">
+					                          <option value="" selected="">市州扶贫办网站        </option>
+					                          <option value="http://www.12388.gov.cn/">中央纪委</option>
+					                          <option value="http://www.zytzb.org.cn/zytzbwz/index.htm">中央统战部</option>
+					                          <option value="http://www.chinapeace.org.cn/">中央政法委</option>
+					                          <option value="http://www.gov.cn/">国务院办公厅</option>
+					                          <option value="http://www.sdpc.gov.cn/">国家发展改革委</option>
+					                          <option value="http://www.moe.gov.cn/">教育部</option>
+					                          <option value="http://www.most.gov.cn/">科学技术部</option>
+					                          <option value="http://www.miit.gov.cn/">工业和信息化部</option>
+					                          <option value="http://www.mps.gov.cn/n16/index.html">公安部</option>
+					                          <option value="http://www.mca.gov.cn/">民政部</option>
+					                          <option value="http://www.mof.gov.cn/">财政部</option>
+					                          <option value="http://www.mep.gov.cn/">环境保护部</option>
+					                          <option value="http://www.mohurd.gov.cn/">住房城乡建设部</option>
+					                          <option value="http://www.moc.gov.cn/">交通运输部</option>
+					                          <option value="http://www.china-mor.gov.cn/">铁道部</option>
+					                          <option value="http://www.ccnt.gov.cn/">文化部</option>
+					                          <option value="http://www.moh.gov.cn/publicfiles//business/htmlfiles/wsb/index.htm">卫生部</option>
+					                          <option value="http://www.chinapop.gov.cn/">国家人口计生委</option>
+					                          <option value="http://www.sasac.gov.cn/n1180/index.html">国务院国资委</option>
+					                          <option value="http://www.customs.gov.cn/publish/portal0/">海关总署</option>
+					                          <option value="http://www.chinatax.gov.cn/n8136506/index.html">国家税务总局</option>
+					                          <option value="http://www.saic.gov.cn/">国家工商总局</option>
+					                          <option value="http://www.aqsiq.gov.cn/">国家质检总局</option>
+					                          <option value="http://www.chinasarft.gov.cn/">国家广电总局</option>
+					                          <option value="http://www.gapp.gov.cn/">新闻出版总署</option>
+					                          <option value="http://www.sport.gov.cn/n16/index.html">国家体育总局</option>
+					                          <option value="http://www.forestry.gov.cn/">国家林业局</option>
+					                          <option value="http://www.cnta.gov.cn/">国家旅游局</option>
+					                          <option value="http://www.cass.net.cn/">中国社会科学院</option>
+					                          <option value="http://www.circ.gov.cn/web/site0/">中国保监会</option>
+					                          <option value="http://www.pbc.gov.cn/">中国人民银行</option>
+					                          <option value="http://www.acftu.net/">全国总工会</option>
+					                          <option value="http://www.ccyl.org.cn/">共青团中央</option>
+					                          <option value="http://www.women.org.cn/">全国妇联</option>
+					                          <option value="http://www.cflac.org.cn/">中国文联</option>
+					                          <option value="http://www.chinawriter.com.cn/">中国作协</option>
+					                          <option value="http://www.cast.org.cn/">中国科协</option>
+					                          <option value="http://www.cdpf.org.cn/">中国残联</option>
+					                          <option value="http://www.redcross.org.cn/">中国红十字总会</option>
+					                          <option value="http://www.zgggw.gov.cn/templet/default/">中国关工委</option>
+					                        </select>
+					                      </div>            </td>
+					            <td height="22" style="word-wrap:break-word;table-layout:fixed"><div align="center">
+					             <select name="select" onchange="javasctipt:window.open(this.value,'_blank')" style="FONT-FAMILY: 宋体; FONT-SIZE: 12px">
+					                          <option value="" selected="">地方政府网站               </option>
+					                          <option value="http://www.gov.cn">中央政府门户网站</option>
+					                          <option value="http://www.peopledaily.com.cn">人民网</option>
+					                          <option value="http://www.xinhuanet.com">新华网</option>
+					                          <option value="http://www.shanghai.gov.cn">上海政府网</option>
+					                          <option value="http://www.godpp.gov.cn">中国文明网</option>
+					                          <option value="http://www.wmsh.gov.cn">上海文明网</option>
+					                          <option value="http://www.pad.gov.cn">中国公益广告网</option>
+					                        </select>
+					              </div></td>
+					            <td height="22" style="word-wrap:break-word;table-layout:fixed"><div align="center">
+					              <select name="select" onchange="javasctipt:window.open(this.value,'_blank')" style="FONT-FAMILY: 宋体; FONT-SIZE: 12px">
+					                          <option value="" selected="">友情链接             </option>
+					                          <option value="http://www.gov.cn">中央政府门户网站</option>
+					                          <option value="http://www.peopledaily.com.cn">人民网</option>
+					                          <option value="http://www.xinhuanet.com">新华网</option>
+					                          <option value="http://www.shanghai.gov.cn">上海政府网</option>
+					                          <option value="http://www.godpp.gov.cn">中国文明网</option>
+					                          <option value="http://www.wmsh.gov.cn">上海文明网</option>
+					                          <option value="http://www.pad.gov.cn">中国公益广告网</option>
+					                        </select>
+					              </div></td>
+					            
+					          </tr>
+					        </tbody></table></td>
+					      </tr>
+					    </tbody></table>
+			
+			</div>		
+		</div>
+		<div class="footer mt10">
+			<div class="footmain" style="padding-top: 10px;">
+				<a style="text-align: center; font-size: 14px; color: #FFFFF3;">十堰市地方税务局地址：十堰市东山路2号 &nbsp; &nbsp;邮编44200 &nbsp; &nbsp;行政审批咨询举报电话：12366</a>
+				
+			</div>
+			
+		</div>				
+	</body>
+</html>
